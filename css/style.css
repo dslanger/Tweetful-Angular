@@ -53,7 +53,14 @@ nav {
   border-radius: 2px; /* ds added */
   cursor: pointer; /* ds added */
   font-size: .7em; /* ds added */
+  transition: all ease 333ms; /* ds added */
   /*margin-top: -10px; ds removed */
+}
+
+.nav-sign-out:hover,
+.nav-sign-out:active {
+  background: #fff;
+  color: #6799FF;
 }
 
 .bird-topbar-blue {
@@ -63,9 +70,39 @@ nav {
   /*height: 21px; ds removed*/
   height: 30px; /* ds added */
   float: left;
-  /*margin-top: 10px; ds removed*/
+  /* margin-top: 10px; ds removed */
   background-repeat: no-repeat; /* ds added */
 }
+
+/*duck walk animation: just a fun, not for production*/
+
+/* safari and chrome */
+@-webkit-keyframes duckWalk {
+	0% {-webkit-transform:rotate(10deg);}
+	50% {-webkit-transform:rotate(-10deg);}
+	100% {-webkit-transform:rotate(10deg);}
+}
+
+/* firefox */
+@-moz-keyframes duckWalk {
+	0% {-moz-transform:rotate(10deg);}
+	50% {-moz-transform:rotate(-10deg);}
+	100% {-moz-transform:rotate(10deg);}
+}
+
+/* normal */
+@keyframes duckWalk {
+	0% {transform:rotate(10deg);}
+	50% {transform:rotate(-10deg);}
+	100% {transform:rotate(10deg);}
+}
+
+.bird-topbar-blue:hover {
+	-webkit-animation: duckWalk 0.5s;
+	-moz-animation: duckWalk 0.5s;
+	animation: duckWalk 0.5s;
+}
+
 
 .container {
   width: 865px;
@@ -222,14 +259,16 @@ table.stats td:first-child {
   font-size: 1.25em;
 }
 
-.info-container {
+.info-container,
+.team-container {
   text-align: center;
   width: 100%;
   margin-bottom: 2em;
   /*background: rgba(215, 215, 215, .15);*/
 }
 
-.info {
+.info,
+.team-member {
   display: block;
   width: 100%;
   margin-bottom: 4em;
@@ -238,21 +277,9 @@ table.stats td:first-child {
   padding-bottom: 1.5em;
 }
 
-.info-title {
-  font-size: 1.6em;
-  font-weight: 400;
-  color: #6799FF;
-}
-
-.info-content {
-  max-width: 23.4375em; /* 375px / 16px */
-  margin: 0 auto;
-  font-size: 1em;
-  font-weight: 400;
-}
-
 @media only screen and (min-width: 768px) {
-  .info {
+  .info,
+  .team-member {
     vertical-align: top;
     display: inline-block;
     width: 30%;
@@ -262,13 +289,27 @@ table.stats td:first-child {
   }
 }
 
+.info-title,
+.team-member__name {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #6799FF;
+}
+
+.info-content,
+.team-member__bio {
+  max-width: 23.4375em; /* 375px / 16px */
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/*.team-member__bio {
+  text-align: left;
+}*/
+
 .footer {
   background: #eeeeef;
   padding: 1em 1em;
   color: #676e77;
 }
-
-
-/*.info-title {
-  text-align: center;
-}*/
