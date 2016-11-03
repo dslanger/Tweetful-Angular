@@ -2,6 +2,8 @@
 <html ng-app="tweetful">
 <head>
   <title>Tweetful</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
@@ -18,7 +20,8 @@
     <a class="nav-logo-link" href="/">
       <span class="icon bird-topbar-blue"></span>
     </a>
-    <button type="button">Sign out</button>
+    <!-- ds added nav-sign-out class to match existing css-->
+    <button type="button" class="nav-sign-out">Sign out</button>
   </nav>
   <!--<%= notices %>-->
   <div ng-view></div>

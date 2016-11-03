@@ -249,6 +249,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/duck.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1373,
+		"inputAbbreviatedPath": "\/images\/duck.png",
+		"outputAbbreviatedPath": "\/images\/duck.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/lohp_mdl_sprite.png": {
 		"fileType": 32768,
 		"ignore": 0,
