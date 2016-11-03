@@ -74,7 +74,7 @@ nav {
   background-repeat: no-repeat; /* ds added */
 }
 
-/*duck walk animation: just a fun, not for production*/
+/*duck walk animation: just for a fun, not for production*/
 
 /* safari and chrome */
 @-webkit-keyframes duckWalk {
